@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "outDir": "dist/main",
+    "declarationDir": "dist/types",
+    "rootDir": "src/ts",
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "target": "es5",
+    "declaration": true,
+    "inlineSourceMap": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["es2017", "dom"],
+    "types": [],
+    "typeRoots": ["node_modules/@types", "src/types"]
+  },
+  "include": ["src/ts/**/*.ts"],
+  "exclude": ["node_modules/**"],
+  "compileOnSave": false
+}
