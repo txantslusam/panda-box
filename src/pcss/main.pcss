@@ -1,0 +1,140 @@
+.pandaBoxPopup {
+  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  transition: 0.3s opacity;
+  text-align: center;
+  padding: 24px 0;
+  pointer-events: none;
+
+  &--active {
+    visibility: visible;
+    z-index: 100000;
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  &__description {
+    font-size: 18px;
+  }
+
+  &__wrapper {
+    width: 90vw;
+    height: 90vh;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 24px;
+  }
+
+  &__container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s transform;
+  }
+
+  &__imageWrapper {
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    user-select: none;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__arrow,
+  &__closeButton {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 8px;
+    width: 36px;
+    height: 48px;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: 0.3s background;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.5);  
+    }
+
+    &--next {
+      transform: translateY(-50%) rotate(180deg);
+      right: 8px;
+      left: auto;
+    }
+
+    svg {
+      margin: 6px;
+      width: 24px;
+      height: 36px;
+      fill: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &__closeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: 0.3s background;
+    border-radius: 4px;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.5);  
+    }
+    
+    svg {
+      fill: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &--singleImage &__arrow {
+    display: none;
+  }
+}

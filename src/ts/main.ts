@@ -9,9 +9,8 @@ export default class PandaBox {
 
   constructor(selector: string) {
     this.selector = selector || this.defaultSelector;
-    this.galleries = Array.from(document.querySelectorAll(this.selector))
-      .map(element => new Gallery(element));
     this.popup = new Popup();
+    this.galleries = Array.from(document.querySelectorAll(this.selector))
+      .map(element => new Gallery(element, this.popup));
   }
-
 }
