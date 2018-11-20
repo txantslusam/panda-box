@@ -139,8 +139,9 @@ export default class Popup {
       this.imagesContainer.style.transition = 'none';
     }
 
-    this.imagesContainer.style.transform = `translate3d(${index * -100}%, 0, 0)`;
-    this.imagesContainer.style.webkitTransform = `translate3d(${index * -100}%, 0, 0)`;
+    this.imagesContainer.style.transform =
+    this.imagesContainer.style.webkitTransform =
+    `translate3d(${index * -100}%, 0, 0)`;
 
     setTimeout(() => {
       this.imagesContainer.style.transition = '';

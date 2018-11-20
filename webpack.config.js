@@ -1,23 +1,35 @@
 const path = require('path');
 const TSLintPlugin = require('tslint-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+
 const nodeEnv = process.env.NODE_ENV || 'development'
 const devMode = nodeEnv !== 'production';
 
 module.exports = {
   mode: nodeEnv,
-  entry: [
-    './src/pcss/main.pcss',
-    './src/ts/main.ts',
-  ],
+  entry: {
+    'pandaBox': './src/ts/main.ts',
+    'pandaBox.min': './src/ts/main.ts',
+  },
   output: {
     library: 'PandaBox',
     libraryTarget: 'umd',
     libraryExport: 'default',
-    filename: 'pandaBox.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
   },
   optimization: {
+    minimize: true,
+    minimizer: [
+      new UglifyJsPlugin({
+        include: /\.min\.js$/,
+      }),
+      new OptimizeCSSAssetsPlugin({
+        include: /\.min\.css$/
+      })
+    ],
     splitChunks: {
       cacheGroups: {
         styles: {
@@ -63,7 +75,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "pandaBox.css",
+      filename: "[name].css",
     }),
     new TSLintPlugin({
       files: ['./src/ts/**/*.ts'],

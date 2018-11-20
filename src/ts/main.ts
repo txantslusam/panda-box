@@ -1,3 +1,5 @@
+import '../pcss/main.pcss';
+
 import Gallery from './Gallery';
 import Popup from './Popup';
 

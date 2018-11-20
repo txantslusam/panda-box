@@ -14,6 +14,5 @@ module.exports = ({ env }) => ({
     },
     'postcss-property-lookup': {},
     'postcss-nested': {},
-    'cssnano': env === 'production' ? {} : false,
   },
 });
