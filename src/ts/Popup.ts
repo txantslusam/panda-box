@@ -143,9 +143,29 @@ export default class Popup {
     this.imagesContainer.style.webkitTransform =
     `translate3d(${index * -100}%, 0, 0)`;
 
+    this.setTitleAndDescription(index);
+
     setTimeout(() => {
       this.imagesContainer.style.transition = '';
-    },         1);
+    },         10);
+  }
+
+  private setTitleAndDescription(index: number) {
+    const image = this.activeImages[index];
+    this.title.innerHTML = image.title;
+    this.description.innerHTML = image.description;
+
+    if (image.title) {
+      this.title.style.visibility = 'visible';
+    } else {
+      this.title.style.visibility = 'hidden';
+    }
+
+    if (image.description) {
+      this.description.style.visibility = 'visible';
+    } else {
+      this.description.style.visibility = 'hidden';
+    }
   }
 
   private openPopup() {

@@ -7,12 +7,12 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.6);
-  overflow: hidden;
+  background: rgba(0, 0, 0, 0.7);
   transition: opacity 0.3s;
   text-align: center;
   padding: 24px 0;
   pointer-events: none;
+  overflow: auto;
 }
 .pandaBoxPopup--active {
   visibility: visible;
@@ -23,14 +23,20 @@
 .pandaBoxPopup__title {
   font-size: 24px;
   font-weight: 700;
-  color: #fff;
+  color: hsla(0, 0%, 100%, 0.9);
+  min-height: 27px;
+  padding: 0 64px;
 }
 .pandaBoxPopup__description {
   font-size: 18px;
+  margin: 0 5vw;
+  padding: 8px 0;
+  color: hsla(0, 0%, 80%, 0.9);
+  text-align: left;
 }
 .pandaBoxPopup__wrapper {
   width: 90vw;
-  height: 90vh;
+  height: 80vh;
   overflow: hidden;
   margin: 24px auto auto;
 }

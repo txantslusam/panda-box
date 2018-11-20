@@ -18,6 +18,7 @@ export default class Popup {
     private prepareButtons;
     private setEvents;
     private setActiveIndex;
+    private setTitleAndDescription;
     private openPopup;
     private closePopup;
     private indicateEnd;
