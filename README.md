@@ -2,6 +2,8 @@
 
 A Lightbox plugin written in TypeScript.
 
+[Demo](https://txantslusam.github.io/panda-box/)
+
 ## 1. Installation
 
 Using npm:
