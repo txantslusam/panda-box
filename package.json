@@ -1,6 +1,6 @@
 {
   "name": "panda-box",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A lightbox plugin written in Typescript",
   "keywords": [
     "lightbox",
