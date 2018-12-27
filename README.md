@@ -13,6 +13,18 @@ or yarn:
   $ yarn add panda-box
 ```
 
+Then import it in your javascript files:
+
+```js
+import PandaBox from 'panda-box';
+```
+
+Also make sure that you include styles:
+
+```js
+import 'panda-box/dist/pandaBox.css';
+```
+
 ## 2. Usage
 
 Add attribute `data-pandabox` to container of gallery and call `new PandaBox();`
