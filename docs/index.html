@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PandaBox demo page</title>
+  <link rel="stylesheet" href="dist/pandaBox.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+  <main>
+    <section class="jumbotron text-center mb-0">
+      <div class="container">
+        <h1 class="jumbotron-heading">Panda box</h1>
+        <p class="lead text-muted">A Lightbox plugin written in TypeScript.</p>
+        <p>
+          <a href="https://github.com/txantslusam/panda-box/" class="btn btn-primary my-2">Github</a>
+        </p>
+      </div>
+    </section>
+    <div class="album py-3 bg-light">
+      <div class="container">
+        <h2>A classic gallery</h2>
+        <div class="row" data-pandabox>
+          <div class="col-md-4">
+            <a href="img/1.jpg" class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="img/1-thumb.jpg" alt="Card image cap">
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="img/1.jpg" class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="img/1-thumb.jpg" alt="Card image cap">
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="img/1.jpg" class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="img/1-thumb.jpg" alt="Card image cap">
+            </a>
+          </div>
+
+          <div class="col-md-4">
+            <a href="img/1.jpg" class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="img/1-thumb.jpg" alt="Card image cap">
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="img/1.jpg" class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="img/1-thumb.jpg" alt="Card image cap">
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="img/1.jpg" class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="img/1-thumb.jpg" alt="Card image cap">
+            </a>
+          </div>
+
+          <div class="col-md-4">
+            <a href="img/1.jpg" class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="img/1-thumb.jpg" alt="Card image cap">
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="img/1.jpg" class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="img/1-thumb.jpg" alt="Card image cap">
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="img/1.jpg" class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="img/1-thumb.jpg" alt="Card image cap">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="album py-3 bg-light">
+      <div class="container">
+        <h2>Single Image</h2>
+        <div class="row" data-pandabox>
+          <div class="col-md-4">
+            <a href="img/1.jpg" class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="img/1-thumb.jpg" alt="Card image cap">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="album py-3 bg-light">
+      <div class="container">
+        <h2>Image with title and description</h2>
+        <div class="row" data-pandabox>
+          <div class="col-md-4">
+            <a href="img/1.jpg" data-title="Panda" data-description="A little panda" class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="img/1-thumb.jpg" alt="Card image cap">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script type="text/javascript" src="dist/pandaBox.js"></script>
+  <script>
+    window.box = new PandaBox();
+  </script>
+</body>
+</html>

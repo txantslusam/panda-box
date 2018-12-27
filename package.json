@@ -7,9 +7,8 @@
     "popup",
     "gallery"
   ],
-  "main": "dist/main/pandaBox.js",
-  "typings": "dist/types/index.d.ts",
-  "module": "dist/module/pandaBox.js",
+  "main": "dist/pandaBox.js",
+  "typings": "dist/types/main.d.ts",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config ./webpack.config.js  --progress --profile --color --display-error-details --display-cached --bail",
     "watch": "cross-env NODE_ENV=development webpack --config ./webpack.config.js --inline --progress --watch --open",
@@ -17,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/txantslusam/pandaBox.git"
+    "url": "https://github.com/txantslusam/panda-box.git"
   },
   "author": "Mateusz Tomkowiak <matixnt1@windowslive.com>",
   "license": "MIT",
